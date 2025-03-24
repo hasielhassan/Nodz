@@ -671,7 +671,7 @@ class Nodz(QtWidgets.QGraphicsView):
         # Emit signal.
         self.signal_AttrDeleted.emit(node.name, index)
 
-    def editAttribute(self, node, index, newName=None, newIndex=None):
+    def editAttribute(self, node, index, newName=None, newIndex=None, newDataType=None):
         """
         Edit the specified attribute.
 
@@ -686,6 +686,9 @@ class Nodz(QtWidgets.QGraphicsView):
 
         :type  newIndex: int.
         :param newIndex: The index for the given attribute.
+
+        :type  newDataType: type.
+        :param newDataType: The new data type for the given attribute.
 
         """
         if not node in self.scene().nodes.values():
